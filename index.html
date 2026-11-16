@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Lalab Day</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=2" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section id="welcome-screen" class="screen active">
+        <div class="welcome-card">
+          <div class="float heart-one">💖</div>
+          <div class="float heart-two">💞</div>
+          <div class="float heart-three">✨</div>
+          <p class="eyebrow">For the love of my life</p>
+          <h1>Happy Anniversary, My Love</h1>
+          <p class="tagline">
+            Every chapter, every memory, every dream, all of it feels brighter
+            because it's with you.
+          </p>
+          <button class="primary-btn" data-next="lock-screen">Open surprise</button>
+        </div>
+      </section>
+
+      <section id="lock-screen" class="screen">
+        <div class="phone-frame">
+          <div class="lock-icon">🔒</div>
+          <h2>Enter Passcode</h2>
+          <p>Use the date we first started dating</p>
+
+          <div class="code-display" aria-live="polite">
+            <span id="code-display-text"></span>
+          </div>
+
+          <div id="lock-pad" class="lock-pad" aria-label="Numeric keypad">
+            <button type="button" class="digit" data-digit="1">1</button>
+            <button type="button" class="digit" data-digit="2">2</button>
+            <button type="button" class="digit" data-digit="3">3</button>
+            <button type="button" class="digit" data-digit="4">4</button>
+            <button type="button" class="digit" data-digit="5">5</button>
+            <button type="button" class="digit" data-digit="6">6</button>
+            <button type="button" class="digit" data-digit="7">7</button>
+            <button type="button" class="digit" data-digit="8">8</button>
+            <button type="button" class="digit" data-digit="9">9</button>
+            <button type="button" class="digit clear" data-action="clear">Clear</button>
+            <button type="button" class="digit" data-digit="0">0</button>
+            <button type="button" class="digit delete" data-action="delete">⌫</button>
+          </div>
+
+          <button id="unlock-btn" type="button" class="primary-btn lock-submit">Unlock</button>
+          <p id="lock-error" class="error-text" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section id="puzzle-screen" class="screen">
+        <div class="panel">
+          <p class="section-kicker">Our favorite memory</p>
+          <h2>Piece together our story</h2>
+          <div id="puzzle-board" class="puzzle-board" aria-label="Photo puzzle"></div>
+          <div class="controls">
+            <button id="reset-puzzle-btn" class="secondary-btn">Reset puzzle</button>
+          </div>
+          <button id="continue-to-recording" class="primary-btn hidden">
+            Continue
+          </button>
+        </div>
+      </section>
+
+      <section id="memory-screen" class="screen">
+        <div class="panel memory-panel">
+          <p class="section-kicker">Our little moments</p>
+          <h2>Match the memories</h2>
+          <div id="memory-board" class="memory-board" aria-label="Memory cards game"></div>
+          <p id="memory-status" class="status-text">Find all the matching memories.</p>
+          <button id="continue-to-recording-from-memory" class="primary-btn hidden">
+            Continue
+          </button>
+        </div>
+      </section>
+
+      <section id="recording-screen" class="screen">
+        <div class="tape-deck">
+          <div class="tape-reels">
+            <div class="reel reel-left"></div>
+            <div class="reel reel-right"></div>
+          </div>
+          <p class="section-kicker">A voice from my heart</p>
+          <h2>Listen to my note</h2>
+          <audio id="voice-recording" src="Lalab.mp3" preload="metadata" hidden></audio>
+          <div class="controls">
+            <button id="play-message-btn" class="primary-btn">Play message</button>
+            <button id="pause-message-btn" class="secondary-btn">Pause</button>
+          </div>
+          <p id="recording-status" class="status-text">Press play to hear my message.</p>
+          <button id="open-letter-btn" class="primary-btn hidden">Open my letter</button>
+        </div>
+      </section>
+
+      <section id="envelope-screen" class="screen">
+        <div class="envelope-scene">
+          <p class="section-kicker">One last surprise</p>
+          <h2>For the woman I love</h2>
+
+          <div class="envelope-wrap">
+            <button id="open-envelope-btn" class="primary-btn" aria-expanded="false" aria-controls="letter-modal">Open envelope</button>
+
+            <div id="envelope" class="envelope" aria-label="Love letter envelope">
+              <div class="flap"></div>
+              <div class="paper-shadow"></div>
+            </div>
+          </div>
+
+          <button id="go-to-slot-btn" class="primary-btn hidden">Next surprise</button>
+        </div>
+
+        <div id="letter-modal" class="letter-modal hidden" aria-modal="true" role="dialog">
+          <div class="letter-card">
+            <button id="close-letter-btn" class="close-letter-btn" aria-label="Close letter">×</button>
+            <div class="letter-paper">
+              <p class="letter-intro">Hi Lab,</p>
+              <p>
+                Happy 4th Anniversary Lalab! Dalia ras panahon lab 4years naman diay ta, di naka pwede magselos ha kay ikaw nay pinakadugay nako. Wa naman koy maingon lab gusto rako mag lalab og hugging rata tibuok adlaw.
+                I hope nga happy and ok raka diha lab, unya please atimana imong kaugalingon kay wala ko dinha moatiman nimo. I want you to know nga naa rako permi diri para nimo, kung unsa man gani problema andam ko motabang or maminaw.
+              </p>
+              <p>
+                I love you kaayo lalab nakoooo take care alwaysss. Happy Anniversary Mylab, I love youuuu.
+              </p>
+              <p class="signature">Always yours,</p>
+              <p class="signature">Jon Keith</p>
+            </div>
+            <button id="read-letter-next-btn" class="primary-btn">Continue</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="slot-screen" class="screen">
+        <div class="slot-machine-panel">
+          <p class="section-kicker">Lucky final surprise</p>
+          <h2>Spin for the jackpot</h2>
+
+          <div class="slot-machine">
+            <div class="reel-window">
+              <div class="reel-column" data-reel="0">💖</div>
+            </div>
+            <div class="reel-window">
+              <div class="reel-column" data-reel="1">💖</div>
+            </div>
+            <div class="reel-window">
+              <div class="reel-column" data-reel="2">💖</div>
+            </div>
+          </div>
+
+          <div class="slot-actions">
+            <button id="spin-btn" class="primary-btn">Spin</button>
+            <button id="claim-jackpot-btn" class="claim-btn hidden">Claim jackpot</button>
+          </div>
+          <p id="slot-message" class="status-text">One spin and the luck is yours.</p>
+        </div>
+      </section>
+    </main>
+
+    <div id="jackpot-modal" class="jackpot-modal hidden" role="dialog" aria-modal="true" aria-labelledby="jackpot-modal-title" aria-hidden="true" tabindex="-1">
+      <div class="jackpot-card">
+        <div class="jackpot-mark" aria-hidden="true">🎁</div>
+        <p class="section-kicker">A little something for you</p>
+        <h2 id="jackpot-modal-title">Jackpot sending to you</h2>
+        <p>Your anniversary surprise is on its way. I love you! 💜</p>
+      </div>
+    </div>
+
+    <script src="script.js?v=3"></script>
+  </body>
+</html>
